@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<level version="2" message="Congradulations!! You beat Level 2!!" title="Level 2" description="
+Welcome again to The Maze Caves!\n
+\n
+I assume you've already completed Level 1, but if you haven't, I highly recommend you do.\n
+Level 2 is a bit more complicated than Level 1 with more objects that you can do stuff\n
+with (See \'Key\' below). Other than that, this level has a total of three floors.\n
+\n
+Key:\n
+Switches - Switches open and close doors. Usually these are 'S's.\n
+Doors - Doors only allow you to pass through when open. Usually these are '-'s or '|'s.\n
+Teleporters - Teleporters move you to other places in the level. Usually these are 'O's or 'U's.\n
+Instant Ladders - Another form of ladders that instantly (without you pressing \'Action\') move you\n
+    to other floors in the level. They can also make you restart the floor.">
+	<floor id="0">
+		<player rx="1" ry="1" x="7" y="4" />
+		<map>
+		BBB
+		ACA
+		D!!
+		</map>
+		<A>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X XXO      OXX X!
+			!X   XT    XX   X!
+			!     XX  XX     !
+			!    OX    XO    !
+			!X  XX      XX  X!
+			!X XT        XX X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="T" x="5" y="2" type="message" message="Which teleporter do you choose?" />
+			<button piece="O" x="4" y="1" type="teleporter" tx="1" />
+			<button piece="O" x="11" y="1" type="teleporter" tx="14" />
+			<button piece="O" x="4" y="4" type="teleporter" tx="6" />
+			<button piece="O" x="11" y="4" type="teleporter" tx="9" />
+			<button piece=" " x="7" y="3" type="teleporter" instant="true" notify="false" trx="2" />
+			<button piece=" " x="8" y="3" type="teleporter" instant="true" notify="false" trx="2" />
+			<button piece="T" x="3" y="6" type="message" message="Are you sure you should go down?" />
+		</A>
+		<B>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X     X  X     X!
+			!X  XXX XX XXX  X!
+			!      X  X      !
+			!      X  X      !
+			!X  XXX    XXX  X!
+			!X              X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<transporter from="UP" to="NONE" try="~1" />
+			<transmitter from="UP" to="NONE" ty="1" />
+		</B>
+		<C>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X X            X!
+			!X  XXX XX XXX  X!
+			!     SX  X      !
+			!      X  X      !
+			!X  XXX    XXX  X!
+			!X X            X!
+			!XXXXXXXXXXXXXXXX!
+			</map>
+			<transporter from="RIGHT" trx="~-1" />
+			<transporter from="LEFT" trx="~1" />
+			
+			<door piece="-" x="7" y="0" key="1" />
+			<door piece="-" x="8" y="0" key="1" />
+			<button piece="S" x="5" y="3" type="setter" key="1" value="![1]">
+				<action type="message" message="Opened the door!" condition="[1]" />
+				<action type="message" message="Closed the door!" condition="![1]" />
+			</button>
+		</C>
+		<D>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X XV         X X!
+			!X  XXX XX XXX  X!
+			!      X  X      !
+			!      X  X      !
+			!X  XXX    XXX  X!
+			!X              X!
+			!XXXXXXXXXXXXXXXX!
+			</map>
+			<button piece="V" x="3" y="1" type="ladder" floor="1" />
+		</D>
+	</floor>
+	<floor id="1">
+		<player rx="0" ry="0" x="6" y="4" />
+		<map>
+		ABBCA
+		</map>
+		<A>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!XS             X!
+			!XXXXXXXXX XXXXXX!
+			!  VX  A   A   A !
+			!   XA   A   A   !
+			!XXXXXX XXXXXXXXX!
+			!XA            SX!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<door piece="-" x="7" y="0" key="1" inverted="true" />
+			<door piece="-" x="8" y="0" key="1" inverted="true" />
+			<door piece="-" x="7" y="7" key="1" inverted="true" />
+			<door piece="-" x="8" y="7" key="1" inverted="true" />
+			<door piece="-" x="6" y="5" key="1" />
+			<door piece="|" x="15" y="3" key="1" inverted="true" />
+			<door piece="|" x="15" y="4" key="1" inverted="true" />
+			<button piece="S" x="1" y="1" type="setter" key="2" value="![2]" />
+			<button piece="S" x="14" y="6" type="setter" key="1" value="![1]" />
+			<button piece="A" x="1" y="6" type="ladder" instant="true" floor="0" condition="![2]"/>
+			<block piece="X" x="1" y="5" collidable="false"/>
+			<button piece="V" x="2" y="3" type="ladder" floor="2" />
+			<button piece="A" x="4" y="4" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="6" y="3" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="8" y="4" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="10" y="3" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="12" y="4" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="14" y="3" type="ladder" instant="true" floor="0" />
+		</A>
+		<B>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!XT    A  A     X!
+			!X  A  A  A  A  X!
+			!  A  A  A  A  A !
+			! A  A  A  A  A  !
+			!X  A  A  A  A  X!
+			!X     A  A     X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="T" x="1" y="1" type="message" message="Don't... Touch... Anything!" />
+			<button piece="A" x="6" y="1" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="9" y="1" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="3" y="2" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="6" y="2" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="9" y="2" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="12" y="2" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="2" y="3" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="5" y="3" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="8" y="3" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="11" y="3" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="14" y="3" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="1" y="4" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="4" y="4" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="7" y="4" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="10" y="4" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="13" y="4" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="3" y="5" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="6" y="5" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="9" y="5" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="12" y="5" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="6" y="6" type="ladder" instant="true" floor="0" />
+			<button piece="A" x="9" y="6" type="ladder" instant="true" floor="0" />
+		</B>
+		<C>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!XT  X   X X    X!
+			!X   XXX    X   X!
+			!  X    X XX X X !
+			! X X X  X    X  !
+			!X   X XX X XX  X!
+			!X    X   X     X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="T" x="1" y="1" type="message" message="Home Stretch!" />
+			<block piece="X" x="6" y="5" collidable="false"/>
+			<block piece="X" x="10" y="3" collidable="false"/>
+		</C>
+	</floor>
+	<floor id="2">
+		<player rx="0" ry="0" x="1" y="1" />
+		<map>
+		A
+		</map>
+		<A>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X  S S|     S  X!
+			!X-X X-X--X-X-X X!
+			!X  S S     |S| X!
+			!X-X X X--X X-X X!
+			!XSX X X  X X X X!
+			!X  S S   |S|S|YX!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="S" x="3" y="1" type="setter" key="3" value="![3]" />
+			<door piece="|" x="4" y="1" key="4" />
+			<button piece="S" x="5" y="1" type="setter" key="2" value="![2]" />
+			<door piece="-" x="3" y="2" key="3" />
+			<door piece="|" x="2" y="3" key="4" />
+			<button piece="S" x="3" y="3" type="setter" key="3" value="![3]" />
+			<door piece="|" x="4" y="3" key="4" inverted="true" />
+			<door piece="-" x="3" y="4" key="3" inverted="true" />
+			<door piece="|" x="2" y="6" key="5" />
+			<button piece="S" x="3" y="6" type="setter" key="5" value="![5]" />
+			<door piece="|" x="4" y="6" key="5" inverted="true" />
+			<button piece="S" x="5" y="6" type="setter" key="4" value="![4]" />
+			<button piece="S" x="5" y="3">
+				<action type="setter" key="2" value="![2]" />
+				<action type="setter" key="6" value="![6]" />
+				<action type="setter" key="4" value="![5]" />
+			</button>
+			<door piece="-" x="10" y="4" key="2" />
+			<door piece="-" x="5" y="4" key="2" />
+			<button piece="S" x="10" y="6" type="setter" key="10" value="![10]" />
+			<door piece="|" x="9" y="1" key="6" />
+			<door piece="|" x="11" y="1" key="4" />
+			<button piece="S" x="1" y="5" type="setter" key="7" value="![7]" />
+			<door piece="|" x="6" y="6" key="7" />
+			<button piece="S" x="12" y="1" />
+			<door piece="-" x="14" y="4" key="10" />
+			<door piece="-" x="14" y="2" key="2" inverted="true" />
+			<button piece="Y" x="14" y="6" type="ending" />
+		</A>
+	</floor>
+</level>

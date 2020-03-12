@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<level version="2" message="Congradulations! You beat Level 1." title="Level 1" description="
+Welcome to The Maze Caves!\n
+\n
+Since this is likely your first time playing, let me explain the object of the game;\n
+your goal is to maneuver the multi-floored level to get to an ending. Along the way,\n
+you will encounter various objects that can do different things when you move over\n
+them and press your \'Action\' key. They are listed in the \'Key\' below. There are a\n
+total of three floors in this level; good luck!\n
+\n
+PS: If you don't have enough time to finish the level, hold \'Control + S\' to save your game.\n
+You can load it again at any time from the launcher.\n
+\n
+Key:\n
+Signs - Signs display text and sometimes hints in the level. Usually these are 'T's.\n
+Ladder - Ladders move you to other floors in the level. Usually these are 'V's or 'A's.\n
+Endings - Endings finish the level; your goal is to get to these. Usually these are 'Y's.\n
+\n
+(You can view this message anytime by pressing \'F1\' in game)">
+	<floor id="0">
+		<player rx="0" ry="2" x="7" y="4" />
+		<map>
+		AAC
+		!B!
+		BD!
+		</map>
+		<A>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X  X           X!
+			!X   X      X   X!
+			!     XXXXXX  X  !
+			!     X    X     !
+			!X  XX   X  X  XX!
+			!X        X     X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+		</A>
+		<B>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!XT       X X X X!
+			!X   XX   X     X!
+			!    XXXXXXXX X  !
+			!    XT   X   X  !
+			!X   XXXXXX  XXXX!
+			!X     X        X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="T" x="1" y="1" type="message" message="Looks like your back at the start - kind of." />
+			<button piece="T" x="5" y="4" type="message" message="Map:\nAAC\n! B !\nBD !\n\nPS: The X to the right isn't collidable." />
+			<block piece="X" x="9" y="4" collidable="false" />
+		</B>
+		<C>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X   X      X   X!
+			!XX   X  V X    X!
+			!      XXXX      !
+			!  X             !
+			!XX     XXXX    X!
+			!X     X     X  X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="V" x="8" y="2" type="ladder" floor="1" />
+		</C>
+		<D>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X   X      X   X!
+			!XX   X    X    X!
+			!      XXXX      !
+			!  X             !
+			!XX     XXXX    X!
+			!X    X     X   X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+		</D>
+	</floor>
+	<floor id="1">
+		<player rx="0" ry="0" x="7" y="4" />
+		<map>
+		AAABC
+		D!!!D
+		!EFE!
+		BBFBC
+		</map>
+		<A>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!XX  XT     X   X!
+			!X    X  V X    X!
+			!     XXXXX   X  !
+			!    XT  X X  X  !
+			!X  X XX    X  XX!
+			!X     XX X     X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="T" x="5" y="1" type="message" message="There's a 'Y' somewhere in this maze if you want to skip the last floor;\nhowever, you could just try the last floor by going into this 'V'." />
+			<button piece="T" x="5" y="4" type="message" message="2 Floors to go!" />
+			<block piece="X" x="3" y="0" collidable="false"/>
+			<button piece="V" x="8" y="2" type="ladder" floor="2" />
+		</A>
+		<B>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X   XT     X   X!
+			!X    X    X    X!
+			!    X  XX  X    !
+			! X    X YX    X !
+			!X    X    X    X!
+			!X   X      X   X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="T" x="5" y="1" type="message" message="There's a 'Y' down there; if only you could reach it." />
+			<block piece="X" x="3" y="7" collidable="false"/>
+			<button piece="Y" x="8" y="4" type="ending"/>
+		</B>
+		<C>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X   X      X   X!
+			!XX   X    X    X!
+			!  X    XX   X   !
+			!   X   XX    X  !
+			!X     X  X    XX!
+			!X    X    X    X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+		</C>
+		<D>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X              X!
+			!X  XXXX XXXXX  X!
+			! X   X    X  X  !
+			!  X  X    X   X !
+			!X  XXXXX XXXX  X!
+			!X              X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+		</D>
+		<E>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X X          X X!
+			!X  X X      X  X!
+			!      XX  XX    !
+			!    XX  XX      !
+			!X  X      X X  X!
+			!X X          X X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+		</E>
+		<F>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X   X      X   X!
+			!X    X    X    X!
+			!    X  XX  X    !
+			! X    X  X    X !
+			!X         X    X!
+			!X   X      X   X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+		</F>
+	</floor>
+	<floor id="2">
+		<player rx="0" ry="0" x="7" y="4" />
+		<map>
+		AABAC
+		!!A!B
+		!!C!!
+		</map>
+		<A>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!XX      X      X!
+			!X      X  X    X!
+			!   X  XT X   XX !
+			! XX   X  X  X   !
+			!X    X  X      X!
+			!X      X       X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="T" x="7" y="3" type="message" message="Last floor!" />
+		</A>
+		<B>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X   X     TX   X!
+			!X    X    X    X!
+			!    X  XX  X    !
+			! X    X  X    X !
+			!X    X    X    X!
+			!X   X      X   X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="T" x="10" y="1" type="message" message="Looks like the bottom is blocked.\nUnfortunately, there's no secret blocks on this floor.\n\nPS: Don't waste time, there really are no secret blocks on this floor." />
+		</B>
+		<C>
+			<map>
+			!XXXXXXX  XXXXXXX!
+			!X   X      X   X!
+			!XX   X   YX    X!
+			!  X   XXXX  X   !
+			!   X         X  !
+			!X     X  X    XX!
+			!X    X    X    X!
+			!XXXXXXX  XXXXXXX!
+			</map>
+			<button piece="Y" x="9" y="2" type="ending" />
+		</C>
+	</floor>
+</level>
